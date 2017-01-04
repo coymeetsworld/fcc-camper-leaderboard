@@ -23,6 +23,7 @@ module.exports = {
 		modulesDirectories: [
 			'node_modules',
 			'./app/components',	
+			'./app/api'
 		],
 		alias: { /* Webpack aliases */
 			applicationStyles: 'app/styles/app.scss',
