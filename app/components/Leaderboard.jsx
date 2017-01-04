@@ -12,7 +12,7 @@ class Leaderboard extends React.Component {
 	
 	componentDidMount () {
 		FCCLeaderboardAPI.getTop100Recent().then((res) => {
-			console.log("Top 100 Recent data pulled", res);
+			//console.log("Top 100 Recent data pulled", res);
 			this.setState({
 				campers: res
 			});
@@ -24,9 +24,10 @@ class Leaderboard extends React.Component {
 		
 		var listCampers = () => {
 			if (this.state.campers.length === 0) { return (<p>Nothing rendered</p>) }
-			console.log(this.state.campers[0].username);
+			let id = 1;
 			return this.state.campers.map((camper) => {
-					return (<Camper key={camper.username} 
+					return (<Camper key={id}
+													rank={id++}
 													camperName={camper.username}
 													recentBrownies={camper.recent}
 													allTimeBrownies={camper.alltime}
@@ -36,7 +37,12 @@ class Leaderboard extends React.Component {
 
 		return (
 			<div className="container">
-				<h1>Leaderboard goes here</h1>						
+				<div className="leaderboard-header">
+					<div className="leaderboard-rank">Rank</div>	
+					<div className="leaderboard-camper">Camper Name</div>	
+					<div className="leaderboard-recent">Points in past 30 days</div>
+					<div className="leaderboard-alltime">All time points</div>
+				</div>
 				{listCampers()}
 			</div>
 		);	

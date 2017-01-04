@@ -4,8 +4,8 @@ class Camper extends React.Component {
 
 	constructor(props) {
 		super(props);
-		console.log(props);
 		this.state = {
+			rank : props.rank,
 			camperName : props.camperName,
 			recentBrownies : props.recentBrownies,
 			allTimeBrownies : props.allTimeBrownies,
@@ -16,10 +16,11 @@ class Camper extends React.Component {
 	render () {
 		return (
 			<div className="camper">
+				<div className="camper-rank">{this.state.rank}</div>
+				<div className="camper-img"><img src={this.state.imageURL}/></div>
 				<div className="camper-name">{this.state.camperName}</div>
 				<div className="camper-recent">{this.state.recentBrownies}</div>
 				<div className="camper-alltime">{this.state.allTimeBrownies}</div>
-				<div className="camper-img"><img src={this.state.imageURL}/></div>
 			</div>
 		);	
 	}

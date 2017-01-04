@@ -1,4 +1,29 @@
 .container {
 	background-color: $leaderboard-bg;
 	color: $leaderboard-fg;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.leaderboard-header {
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+.leaderboard-rank {
+	-webkit-flex: 1;
+	flex: 1;
+}
+.leaderboard-camper {
+	-webkit-flex: 1;
+	flex: 1;
+}
+.leaderboard-recent {
+	-webkit-flex: 1;
+	flex: 1;
+}
+.leaderboard-alltime {
+	-webkit-flex: 1;
+	flex: 1;
 }
