@@ -1,6 +1,7 @@
 import React from 'react';
 import Camper from 'Camper';
 import FCCLeaderboardAPI from 'FCCLeaderboardAPI';
+import LeaderboardHeader from 'LeaderboardHeader';
 
 class Leaderboard extends React.Component {
 
@@ -37,12 +38,7 @@ class Leaderboard extends React.Component {
 
 		return (
 			<div className="container">
-				<div className="leaderboard-header">
-					<div className="leaderboard-rank">Rank</div>	
-					<div className="leaderboard-camper">Camper Name</div>	
-					<div className="leaderboard-recent">Points in past 30 days</div>
-					<div className="leaderboard-alltime">All time points</div>
-				</div>
+				<LeaderboardHeader/>
 				{listCampers()}
 			</div>
 		);	
