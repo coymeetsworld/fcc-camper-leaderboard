@@ -24,8 +24,25 @@
 .leaderboard-recent {
 	-webkit-flex: 3;
 	flex: 3;
+	
+	a {
+		cursor: pointer;
+	}
+	
+	a:hover {
+		text-decoration: underline;
+	}
 }
 .leaderboard-alltime {
 	-webkit-flex: 2;
 	flex: 2;
+
+	a {
+		cursor: pointer;
+	}
+	
+	a:hover {
+		text-decoration: underline;
+	}
 }
+

@@ -21,6 +21,10 @@ class Leaderboard extends React.Component {
 
 	}
 	
+	handleStatusChange(newStatus) {
+		console.log("Status change", newStatus);	
+	};
+	
 	render () {
 		
 		var listCampers = () => {
@@ -38,7 +42,7 @@ class Leaderboard extends React.Component {
 
 		return (
 			<div className="container">
-				<LeaderboardHeader/>
+				<LeaderboardHeader onStatusChange={this.handleStatusChange}/>
 				{listCampers()}
 			</div>
 		);	
