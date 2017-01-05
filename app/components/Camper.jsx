@@ -17,8 +17,10 @@ class Camper extends React.Component {
 		return (
 			<div className="camper">
 				<div className="camper-rank">{this.state.rank}</div>
-				<div className="camper-img"><img src={this.state.imageURL}/></div>
-				<div className="camper-name">{this.state.camperName}</div>
+				<div className="camper-bio">
+					<img className="camper-img" src={this.state.imageURL}/>
+					<span className="camper-name">{this.state.camperName}</span>
+				</div>
 				<div className="camper-recent">{this.state.recentBrownies}</div>
 				<div className="camper-alltime">{this.state.allTimeBrownies}</div>
 			</div>
