@@ -18,8 +18,8 @@ class LeaderboardHeader extends React.Component {
 			<div className="leaderboard-header">
 				<div className="leaderboard-rank">Rank</div>	
 				<div className="leaderboard-camper">Camper Name</div>	
-				<div className="leaderboard-recent"><a onClick={this.onStatusChange('render-recent')}>Points in past 30 days</a></div>
-				<div className="leaderboard-alltime"><a onClick={this.onStatusChange('render-alltime')}>All time points</a></div>
+				<div className="leaderboard-recent"><a onClick={this.onStatusChange('recent')}>Points in past 30 days</a></div>
+				<div className="leaderboard-alltime"><a onClick={this.onStatusChange('alltime')}>All time points</a></div>
 			</div>
 		)	
 	};
