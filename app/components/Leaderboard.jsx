@@ -8,7 +8,8 @@ class Leaderboard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			campers : [], /* see if this is needed? */
+			campers : [],
+			list: null
 	 };
 	 
 	 this.handleStatusChange = this.handleStatusChange.bind(this);
@@ -30,7 +31,6 @@ class Leaderboard extends React.Component {
 		
 		if (list === 'recent') {
 			FCCLeaderboardAPI.getTop100Recent().then((res) => {
-				console.log("Top 100 Recent data pulled", res);
 				this.setState({
 					campers: res,
 					list
@@ -38,7 +38,6 @@ class Leaderboard extends React.Component {
 			});
 		} else if (list === 'alltime') {
 			FCCLeaderboardAPI.getTop100AllTime().then((res) => {
-				console.log("Top 100 Alltime data pulled", res);
 				this.setState({
 					campers: res,
 					list
