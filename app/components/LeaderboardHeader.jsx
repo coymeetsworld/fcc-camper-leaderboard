@@ -1,5 +1,5 @@
 import React from 'react';
-var logo = require('public/images/freecodecamp_logo.png');
+var logo = require('images/freecodecamp_logo.png');
 class LeaderboardHeader extends React.Component {
 
 	constructor(props) {
