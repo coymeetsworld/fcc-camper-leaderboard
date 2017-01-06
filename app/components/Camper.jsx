@@ -21,11 +21,12 @@ class Camper extends React.Component {
 	}
 	
 	render () {
+		const url = `https://www.freecodecamp.com/${this.state.camperName}`;
 		return (
 			<div className="camper">
 				<div className="camper-rank">{this.state.rank}</div>
 				<img className="camper-img" src={this.state.imageURL}/>
-				<div className="camper-name">{this.state.camperName}</div>
+				<div className="camper-name"><a href={url} target="_blank">{this.state.camperName}</a></div>
 				<div className="camper-recent">{this.state.recentBrownies}</div>
 				<div className="camper-alltime">{this.state.allTimeBrownies}</div>
 			</div>

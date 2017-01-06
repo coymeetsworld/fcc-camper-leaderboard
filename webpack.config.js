@@ -39,7 +39,9 @@ module.exports = {
 				},
 				test: /\.jsx?$/,
 				exclude: /(node_modules|bower_components)/
-			}
+			},
+			{ test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]' },
+
 		]
 	},
 	sassLoader: {

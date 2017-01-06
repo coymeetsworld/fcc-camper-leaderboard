@@ -9,7 +9,7 @@ class Leaderboard extends React.Component {
 		super(props);
 		this.state = {
 			campers : [],
-			list: null
+			list: 'recent'
 	 };
 	 
 	 this.handleStatusChange = this.handleStatusChange.bind(this);
@@ -49,7 +49,6 @@ class Leaderboard extends React.Component {
 	};
 	
 	render () {
-		console.log("Render called");
 		var listCampers = () => {
 			if (this.state.campers.length === 0) { return (<p>Getting campers...</p>) }
 			let rank = 1;
@@ -65,7 +64,7 @@ class Leaderboard extends React.Component {
 
 		return (
 			<div className="container">
-				<LeaderboardHeader onStatusChange={this.handleStatusChange}/>
+				<LeaderboardHeader activeList={this.state.list} onStatusChange={this.handleStatusChange}/>
 				{listCampers()}
 			</div>
 		);	
