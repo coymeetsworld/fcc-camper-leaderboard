@@ -4,11 +4,9 @@ class LeaderboardHeader extends React.Component {
 
 	constructor(props) {
 		super(props);
-		console.log("Header Props", props);
 		this.state = {
 			activeList : props.activeList
 		};
-		console.log("this.state.activeList", this.state.activeList);
 		
 		this.isActiveList = this.isActiveList.bind(this);
 	}

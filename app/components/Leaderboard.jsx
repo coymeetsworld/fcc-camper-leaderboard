@@ -2,6 +2,7 @@ import React from 'react';
 import Camper from 'Camper';
 import FCCLeaderboardAPI from 'FCCLeaderboardAPI';
 import LeaderboardHeader from 'LeaderboardHeader';
+import FooterBar from 'FooterBar';
 
 class Leaderboard extends React.Component {
 
@@ -27,8 +28,6 @@ class Leaderboard extends React.Component {
 	handleStatusChange(list) {
 		if (list === this.state.list) { return; }
 
-		console.log("Requesting list", list);	
-		
 		if (list === 'recent') {
 			FCCLeaderboardAPI.getTop100Recent().then((res) => {
 				this.setState({
@@ -66,6 +65,7 @@ class Leaderboard extends React.Component {
 			<div className="container">
 				<LeaderboardHeader activeList={this.state.list} onStatusChange={this.handleStatusChange}/>
 				{listCampers()}
+				<FooterBar/>
 			</div>
 		);	
 	}
