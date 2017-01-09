@@ -12,4 +12,4 @@ FreeCodeCamp React project in the Data Visualization curriculum to build a leade
 
 ## Working Demo
 
-*[http://fcc-camper-leaderboard.herokuapp.com/](http://fcc-camper-leaderboard.herokuapp.com/)*
+*[http://fcc-my-camper-leaderboard.herokuapp.com/](http://fcc-my-camper-leaderboard.herokuapp.com/)*
