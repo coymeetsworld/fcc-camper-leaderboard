@@ -1,5 +1,5 @@
 import React from 'react';
-var logo = require('images/freecodecamp_logo.png');
+
 class LeaderboardHeader extends React.Component {
 
 	constructor(props) {
@@ -33,16 +33,13 @@ class LeaderboardHeader extends React.Component {
 		}
 	}
 	
-	/*
-					<img className="logo" src="https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg"/>	
-					*/
-
 	render () {
 
+		/* backup image location: https://dl.dropboxusercontent.com/u/26748984/web-project-resources/freecodecamp/react-fcc-leaderboard/freecodecamp_logo.svg */
 		return (
 			<div>
 				<div className="leaderboard-title">
-					<img className="logo" src={logo}/>
+					<img className="logo" src="https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg"/>	
 					<span className="header">Leaderboard</span>
 				</div>
 				<div className="leaderboard-header">
